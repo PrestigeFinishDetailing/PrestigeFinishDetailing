@@ -1,0 +1,1672 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0a0a0a;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px;
+
+    background: rgba(10, 10, 10, 0.95);
+    border-bottom: 1px solid #333333;
+
+    z-index: 1000;
+}
+
+
+/* Business name in navigation */
+
+.logo {
+    color: #ffffff;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    white-space: nowrap;
+}
+
+
+/* Navigation links */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #999999;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 100vh;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.58),
+        rgba(0, 0, 0, 0.58)
+    ), url("images/hero-car.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+
+/* Small heading above main title */
+
+.small-heading {
+    color: #bdbdbd;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 7px;
+
+    margin-bottom: 30px;
+}
+
+
+/* Main PRESTIGE FINISH heading */
+
+.hero h1 {
+    color: #ffffff;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+
+    font-size: clamp(60px, 10vw, 150px);
+
+    font-weight: 800;
+
+    letter-spacing: 8px;
+
+    line-height: 0.9;
+
+    margin-bottom: 35px;
+}
+
+
+/* Subtitle */
+
+.hero-text {
+    color: #bdbdbd;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.main-button {
+    display: inline-block;
+
+    padding: 17px 42px;
+
+    background: #ffffff;
+    color: #0a0a0a;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+.main-button:hover {
+    background: #bdbdbd;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .small-heading {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+        letter-spacing: 3px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .main-button {
+        padding: 15px 30px;
+    }
+}
+/* =========================
+   DETAILING SECTION
+========================= */
+
+.detailing-section {
+    padding: 130px 7%;
+    background: #111111;
+    border-top: 1px solid #292929;
+}
+
+
+/* Section heading */
+
+.section-heading {
+    max-width: 850px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.section-label {
+    color: #c40000;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(55px, 8vw, 110px);
+    letter-spacing: 6px;
+    line-height: 0.9;
+    margin-bottom: 25px;
+}
+
+.section-heading p:last-child {
+    color: #999999;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* Interior / Exterior cards */
+
+.detailing-cards {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    position: relative;
+
+    padding: 45px;
+
+    background: #181818;
+
+    border: 1px solid #333333;
+
+    transition: 0.35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #c40000;
+}
+
+.service-number {
+    color: #c40000;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+}
+
+.service-card h3 {
+    font-family: "Arial Narrow", Arial, sans-serif;
+
+    font-size: 36px;
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.price {
+    color: #999999;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+.price strong {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.service-description {
+    color: #999999;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.service-card ul {
+    list-style: none;
+
+    margin-bottom: 35px;
+}
+
+.service-card li {
+    color: #dddddd;
+
+    font-size: 14px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #292929;
+}
+
+.service-card li::before {
+    content: "—";
+    color: #c40000;
+    margin-right: 10px;
+}
+
+
+/* Service button */
+
+.service-button {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border: 1px solid #555555;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+.service-button:hover {
+    background: #c40000;
+    border-color: #c40000;
+}
+
+
+/* =========================
+   FULL DETAIL
+========================= */
+
+.full-detail-card {
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: 25px auto 0;
+
+    padding: 65px;
+
+    background: #0a0a0a;
+
+    border: 1px solid #c40000;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+/* Red glow */
+
+.full-detail-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: -150px;
+    right: -150px;
+
+    width: 350px;
+    height: 350px;
+
+    background: #c40000;
+
+    opacity: 0.08;
+
+    border-radius: 50%;
+}
+
+
+/* Recommended label */
+
+.recommended {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    background: #c40000;
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+.full-detail-card h3 {
+    font-family: "Arial Narrow", Arial, sans-serif;
+
+    font-size: clamp(50px, 7vw, 90px);
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+}
+
+.full-detail-description {
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+
+    color: #999999;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* Full detail columns */
+
+.full-detail-grid {
+    max-width: 900px;
+
+    margin: 0 auto 45px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.full-detail-grid div {
+    padding: 25px;
+
+    border-top: 1px solid #333333;
+}
+
+.full-detail-grid h4 {
+    color: #c40000;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.full-detail-grid p {
+    color: #cccccc;
+
+    font-size: 14px;
+
+    margin-bottom: 9px;
+}
+
+
+/* Full detail button */
+
+.full-detail-button {
+    display: inline-block;
+
+    padding: 17px 40px;
+
+    background: #c40000;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+.full-detail-button:hover {
+    background: #ffffff;
+    color: #0a0a0a;
+}
+
+
+/* =========================
+   DETAILING MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .detailing-section {
+        padding: 90px 20px;
+    }
+
+    .section-heading {
+        margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+        font-size: 55px;
+        letter-spacing: 3px;
+    }
+
+    .section-heading p:last-child {
+        font-size: 15px;
+    }
+
+
+    .service-card {
+        padding: 30px;
+    }
+
+    .service-card h3 {
+        font-size: 30px;
+    }
+
+    .full-detail-card {
+        padding: 40px 25px;
+    }
+
+    .full-detail-card h3 {
+        font-size: 50px;
+        letter-spacing: 3px;
+    }
+
+    .full-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+}
+/* =========================
+   PAINT & PROTECTION
+========================= */
+
+.paint-section {
+    position: relative;
+
+    padding: 140px 7%;
+
+    background: #080808;
+
+    border-top: 1px solid #292929;
+}
+
+
+/* Paint heading */
+
+.paint-section .section-heading {
+    margin-bottom: 80px;
+}
+
+.paint-section .section-heading h2 {
+    font-size: clamp(55px, 8vw, 110px);
+}
+
+
+/* Paint service grid */
+
+.paint-services {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Paint cards */
+
+.paint-card {
+    position: relative;
+
+    padding: 45px 35px;
+
+    background: #141414;
+
+    border: 1px solid #303030;
+
+    transition: 0.4s ease;
+}
+
+.paint-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #c40000;
+}
+
+
+/* Featured correction card */
+
+.featured-paint {
+    background: #181818;
+
+    border-color: #555555;
+}
+
+.featured-paint:hover {
+    border-color: #c40000;
+}
+
+
+/* Ceramic card */
+
+.ceramic-card {
+    background:
+        linear-gradient(
+            145deg,
+            #181818,
+            #0b0b0b
+        );
+
+    border-color: #c40000;
+}
+
+
+/* Premium label */
+
+.premium-label {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: #c40000;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+/* Paint headings */
+
+.paint-card h3 {
+    min-height: 95px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+
+    font-size: 31px;
+
+    letter-spacing: 2px;
+
+    line-height: 1;
+}
+
+
+/* Paint price */
+
+.paint-card .price {
+    margin-top: 20px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #303030;
+}
+
+.paint-card .price strong {
+    font-size: 32px;
+}
+
+
+/* Paint description */
+
+.paint-card .service-description {
+    min-height: 145px;
+
+    margin-top: 25px;
+
+    line-height: 1.7;
+}
+
+
+/* Included services */
+
+.paint-includes {
+    margin-bottom: 35px;
+}
+
+.paint-includes p {
+    color: #dddddd;
+
+    font-size: 14px;
+
+    padding: 11px 0;
+
+    border-bottom: 1px solid #292929;
+}
+
+.paint-includes p::before {
+    content: "—";
+
+    color: #c40000;
+
+    margin-right: 10px;
+}
+
+
+/* Paint buttons */
+
+.paint-button {
+    display: inline-block;
+
+    padding: 15px 22px;
+
+    background: #c40000;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+.paint-button:hover {
+    background: #ffffff;
+
+    color: #0a0a0a;
+}
+
+
+/* =========================
+   PAINT MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .paint-services {
+        grid-template-columns: 1fr;
+    }
+
+    .paint-card h3 {
+        min-height: auto;
+    }
+
+    .paint-card .service-description {
+        min-height: auto;
+    }
+
+}
+/* =========================
+   HEADLIGHT RESTORATION
+========================= */
+
+.headlight-section {
+    position: relative;
+
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 7%;
+
+    background: #111111;
+
+    border-top: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+}
+
+.headlight-content {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.headlight-text {
+    max-width: 850px;
+}
+
+.headlight-text h2 {
+    font-family: "Arial Narrow", Arial, sans-serif;
+
+    font-size: clamp(55px, 8vw, 105px);
+
+    line-height: 0.9;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 30px;
+}
+
+.headlight-price {
+    margin-bottom: 30px;
+}
+
+.headlight-price span {
+    font-size: 38px;
+
+    font-weight: 800;
+
+    color: #ffffff;
+}
+
+.headlight-description {
+    max-width: 700px;
+
+    color: #999999;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 45px;
+}
+
+
+/* Headlight inclusions */
+
+
+
+/* =========================
+   ADD-ONS
+========================= */
+
+.addons-section {
+    padding: 140px 7%;
+
+    background: #080808;
+
+    border-top: 1px solid #292929;
+}
+
+.addons-grid {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.addon-card {
+    position: relative;
+
+    min-height: 270px;
+
+    padding: 35px;
+
+    background: #141414;
+
+    border: 1px solid #2c2c2c;
+
+    transition: 0.35s ease;
+}
+
+.addon-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #c40000;
+}
+
+.addon-number {
+    display: block;
+
+    color: #c40000;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+}
+
+.addon-card h3 {
+    max-width: 300px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+
+    font-size: 25px;
+
+    letter-spacing: 1px;
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+}
+
+.addon-card strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    margin-bottom: 20px;
+}
+
+.addon-card p {
+    color: #888888;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .headlight-section {
+        padding: 90px 20px;
+    }
+
+    .headlight-includes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .addons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .headlight-text h2 {
+        font-size: 55px;
+        letter-spacing: 3px;
+    }
+
+    .headlight-description {
+        font-size: 15px;
+    }
+
+    .headlight-includes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .addons-section {
+        padding: 90px 20px;
+    }
+
+    .addons-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================
+   HEADLIGHT HIGHLIGHTS
+========================= */
+
+.headlight-highlights {
+    max-width: 850px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 45px;
+}
+
+.headlight-highlights div {
+    padding: 25px 20px;
+
+    background: #171717;
+
+    border: 1px solid #303030;
+
+    transition: 0.3s ease;
+}
+
+.headlight-highlights div:hover {
+    border-color: #c40000;
+
+    transform: translateY(-5px);
+}
+
+.headlight-highlights span {
+    color: #c40000;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.headlight-highlights h4 {
+    color: #ffffff;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+
+    font-size: 17px;
+
+    letter-spacing: 1px;
+
+    margin: 15px 0 10px;
+}
+
+.headlight-highlights p {
+    color: #888888;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   HEADLIGHT MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .headlight-highlights {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================
+   CONTACT + INSTAGRAM
+========================= */
+
+.contact-section {
+    padding: 140px 7%;
+
+    background: #080808;
+
+    border-top: 1px solid #292929;
+}
+
+
+.contact-grid {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 2px;
+
+    background: #333333;
+}
+
+
+.contact-block {
+    padding: 65px 55px;
+
+    background: #111111;
+}
+
+
+.contact-block h2 {
+    font-family: "Arial Narrow", Arial, sans-serif;
+
+    font-size: clamp(50px, 6vw, 85px);
+
+    line-height: 0.9;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 30px;
+}
+
+
+.contact-description {
+    max-width: 500px;
+
+    color: #999999;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+
+/* Instagram */
+
+.instagram-handle {
+    color: #ffffff;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 30px;
+}
+
+
+.instagram-button {
+    display: inline-block;
+
+    padding: 16px 30px;
+
+    background: #c40000;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+
+.instagram-button:hover {
+    background: #ffffff;
+
+    color: #0a0a0a;
+
+    transform: translateY(-3px);
+}
+
+
+/* Contact details */
+
+.contact-details {
+    background: #141414;
+}
+
+
+.contact-item {
+    padding: 18px 0;
+
+    border-bottom: 1px solid #303030;
+}
+
+
+.contact-item span {
+    display: block;
+
+    color: #c40000;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+
+.contact-item p {
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+
+.contact-button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 16px 30px;
+
+    border: 1px solid #555555;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+
+.contact-button:hover {
+    background: #c40000;
+
+    border-color: #c40000;
+}
+
+
+/* =========================
+   CONTACT MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .contact-section {
+        padding: 90px 20px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 1px;
+    }
+
+    .contact-block {
+        padding: 45px 30px;
+    }
+
+    .contact-block h2 {
+        font-size: 55px;
+    }
+
+}
+
+.instagram-section {
+    padding: 130px 7%;
+
+    background: #111111;
+
+    border-top: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+
+    text-align: center;
+}
+
+.instagram-content {
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+.instagram-content h2 {
+    font-family: "Arial Narrow", Arial, sans-serif;
+
+    font-size: clamp(55px, 8vw, 105px);
+
+    line-height: 0.9;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 30px;
+}
+
+.instagram-content > p:not(.section-label) {
+    max-width: 600px;
+
+    margin: 0 auto 30px;
+
+    color: #999999;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+.instagram-handle {
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 35px;
+}
+
+.instagram-button {
+    display: inline-block;
+
+    padding: 17px 35px;
+
+    background: #c40000;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s ease;
+}
+
+.instagram-button:hover {
+    background: #ffffff;
+
+    color: #0a0a0a;
+
+    transform: translateY(-3px);
+}
+/* =========================
+   WHY PRESTIGE FINISH
+========================= */
+
+.why-section {
+    padding: 140px 7%;
+    background: #111111;
+    border-top: 1px solid #292929;
+}
+
+.why-grid {
+    max-width: 1200px;
+    margin: 70px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    background: #333333;
+}
+
+.why-card {
+    background: #151515;
+    padding: 50px;
+    min-height: 240px;
+    transition: 0.3s ease;
+}
+
+.why-card:hover {
+    background: #1c1c1c;
+    transform: translateY(-4px);
+}
+
+.why-number {
+    display: block;
+    color: #c40000;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 35px;
+}
+
+.why-card h3 {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    color: #ffffff;
+}
+
+.why-card p {
+    max-width: 450px;
+    color: #999999;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .why-section {
+        padding: 90px 20px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+    }
+
+    .why-card {
+        padding: 35px 30px;
+        min-height: auto;
+    }
+
+    .why-card h3 {
+        font-size: 26px;
+    }
+
+}
+/* =========================
+   BOOKING SECTION
+========================= */
+
+.booking-section {
+    padding: 150px 7%;
+    background: #080808;
+    border-top: 1px solid #292929;
+    text-align: center;
+}
+
+.booking-content {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.booking-label {
+    display: block;
+    color: #c40000;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.booking-content h2 {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(65px, 9vw, 125px);
+    line-height: 0.85;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+.booking-content h2 span {
+    color: #c40000;
+}
+
+.booking-content > p {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    color: #999999;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.booking-number {
+    margin-bottom: 40px;
+}
+
+.booking-number span {
+    display: block;
+    color: #777777;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.booking-number strong {
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+.booking-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.booking-button {
+    display: inline-block;
+    padding: 18px 32px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+.booking-button.primary {
+    background: #c40000;
+    color: #ffffff;
+    border: 1px solid #c40000;
+}
+
+.booking-button.primary:hover {
+    background: #ffffff;
+    color: #0a0a0a;
+    border-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.booking-button.secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #555555;
+}
+
+.booking-button.secondary:hover {
+    background: #c40000;
+    border-color: #c40000;
+    transform: translateY(-3px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .booking-section {
+        padding: 100px 20px;
+    }
+
+    .booking-content h2 {
+        font-size: 62px;
+    }
+
+    .booking-buttons {
+        flex-direction: column;
+    }
+
+    .booking-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #050505;
+    border-top: 1px solid #292929;
+    padding: 70px 7% 25px;
+}
+
+.footer-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-brand h2 {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 48px;
+    line-height: 0.85;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.footer-brand p {
+    color: #c40000;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links a,
+.footer-contact a {
+    color: #888888;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: #c40000;
+}
+
+.footer-contact span {
+    color: #c40000;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 25px;
+    border-top: 1px solid #222222;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #555555;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .footer {
+        padding: 60px 20px 25px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding-bottom: 45px;
+    }
+
+    .footer-brand h2 {
+        font-size: 42px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
